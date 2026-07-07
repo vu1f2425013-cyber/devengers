@@ -1,0 +1,6 @@
+{
+  "name": "Smart Bharat",
+  "description": "Smart Bharat is an AI-powered digital governance platform and civic companion that simplifies Indian government services, schemes, complaint resolution, and document analysis into a single conversational and voice-enabled interface.",
+  "requestFramePermissions": ["camera", "microphone", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-sans: "Inter", "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Poppins", "Inter", sans-serif;
+  
+  --gov-primary: #0F4C81;
+  --gov-secondary: #2563EB;
+  --gov-saffron: #FF9933;
+  --gov-success: #138808;
+  --gov-bg: #F8FAFC;
+  --gov-surface: #FFFFFF;
+  --gov-text-primary: #1E293B;
+  --gov-text-secondary: #64748B;
+  --gov-border: #E2E8F0;
+  --gov-error: #DC2626;
+  --gov-warning: #D97706;
+}
+
+/* Class-based Dark Mode configuration */
+.dark {
+  --gov-bg: #0B1329;
+  --gov-surface: #151E3D;
+  --gov-text-primary: #F1F5F9;
+  --gov-text-secondary: #94A3B8;
+  --gov-border: #24325C;
+  --gov-primary: #3B82F6;
+  --gov-secondary: #60A5FA;
+}
+
+/* High Contrast Mode mapping (WCAG Compliance) */
+.high-contrast {
+  --gov-bg: #000000 !important;
+  --gov-surface: #000000 !important;
+  --gov-text-primary: #FFFFFF !important;
+  --gov-text-secondary: #FFFF00 !important;
+  --gov-border: #FFFF00 !important;
+  --gov-primary: #FFFF00 !important;
+  --gov-secondary: #00FFFF !important;
+  --gov-saffron: #FFFF00 !important;
+  --gov-success: #00FF00 !important;
+  --gov-error: #FF0000 !important;
+  --gov-warning: #FFFF00 !important;
+}
+
+@theme {
+  --font-sans: "Inter", "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Poppins", "Inter", sans-serif;
+  
+  --color-gov-primary: var(--gov-primary);
+  --color-gov-secondary: var(--gov-secondary);
+  --color-gov-saffron: var(--gov-saffron);
+  --color-gov-success: var(--gov-success);
+  --color-gov-bg: var(--gov-bg);
+  --color-gov-surface: var(--gov-surface);
+  --color-gov-text-primary: var(--gov-text-primary);
+  --color-gov-text-secondary: var(--gov-text-secondary);
+  --color-gov-border: var(--gov-border);
+  --color-gov-error: var(--gov-error);
+  --color-gov-warning: var(--gov-warning);
+}
+
+/* Smooth, transition-safe animations for theme toggle */
+html, body, div, header, main, footer, section, select, input, button, textarea, label {
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--gov-bg);
+  color: var(--gov-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible {
+  outline: 3px solid var(--gov-saffron) !important;
+  outline-offset: 2px;
+}
+
+/* Custom premium scrollbar styling */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gov-border);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gov-text-secondary);
+}
